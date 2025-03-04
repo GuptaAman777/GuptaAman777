@@ -152,34 +152,26 @@ async function loadChapters() {
       });
       
       chapterCard.innerHTML = `
-        <div class="chapter-info">
-          <h3>${chapter.comicTitle}</h3>
-          <p class="chapter-title">${chapter.title}</p>
-          <p class="chapter-number">Chapter ${chapter.chapterNumber}</p>
-          <p class="chapter-date">Released: ${formattedDate}</p>
-          <button class="read-button">Read Now</button>
-        </div>
-        <div class="chapter-logo">
-          <img src="${chapter.coverImage}" alt="${chapter.comicTitle} Logo" />
-        </div>
-      `;
-      
-      // Add event listener to read button
-      chapterCard.querySelector('.read-button').addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevent card click event
-        alert(`You are about to read ${chapter.comicTitle} - Chapter ${chapter.chapterNumber}: ${chapter.title}`);
-      });
-      
-      // Add event listener to the whole card
-      chapterCard.addEventListener('click', () => {
-        // This could also open the reader
-        const readButton = chapterCard.querySelector('.read-button');
-        readButton.click();
-      });
-      
-      chapterList.appendChild(chapterCard);
+  <div class="chapter-info">
+    <h3>${chapter.comicTitle}</h3>
+    <p class="chapter-title">${chapter.title}</p>
+    <p class="chapter-number">Chapter ${chapter.chapterNumber}</p>
+    <p class="chapter-date">Released: ${formattedDate}</p>
+    <a href="https://guptaaman777.github.io/guptaaman777/${chapter.id}/${chapter.comidId}.html" class="read-button">Read Now</a>
+  </div>
+  <div class="chapter-logo">
+    <img src="${chapter.coverImage}" alt="${chapter.comicTitle} Logo" />
+  </div>
+`;
+
+// Add event listener to the whole card
+chapterCard.addEventListener('click', () => {
+  window.location.href = `https://guptaaman777.github.io/guptaaman777/${chapter.id}/${chapter.comidId}.html`;
+});
+
+chapterList.appendChild(chapterCard);
     });
-    
+
     // If there are no chapters, show a message
     if (chapters.length === 0) {
       chapterList.innerHTML = '<div class="no-data">No chapters available at the moment.</div>';
