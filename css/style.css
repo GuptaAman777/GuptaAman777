@@ -1,13 +1,13 @@
 /* Global Styles */
 :root {
-  --primary-color: #ff9800;
-  --secondary-color: #03a9f4;
-  --background-dark: #121212;
-  --background-darker: #0a0a0a;
-  --background-card: #2c2c2c;
-  --background-section: #1e1e1e;
-  --text-light: #e0e0e0;
-  --text-muted: #b0b0b0;
+  --primary-color: #0047ab; /* Royal Blue */
+  --secondary-color: #00aaff; /* Cyan Blue */
+  --background-dark: #060a17; /* Deep Navy */
+  --background-darker: #02060d; /* Almost Black Blue */
+  --background-card: #162447; /* Darker Blue */
+  --background-section: #050a15; /* Slightly Lighter Dark Blue */
+  --text-light: #e0e0e0; /* Light Text */
+  --text-muted: #a0b3cc; /* Muted Bluish-Gray */
 }
 
 html {
@@ -182,7 +182,7 @@ nav ul li a:hover::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('https://cdn.discordapp.com/attachments/1345717978490077274/1345814899728842834/lv_0_20250302222544.gif?ex=67c6940c&is=67c5428c&hm=ac86ae49a8252c4d174af8fe6973a505e912445247708a020ac65168f980d802&');
+  background-image: url('https://github.com/GuptaAman777/guptaaman777/blob/main/assets/banner/Carlottabackground.jpeg?raw=true');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
